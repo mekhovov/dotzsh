@@ -17,8 +17,9 @@ git_prompt_info() {
 }
 
 prompt_bolkabolka_setup() {
-  PS1='%{$fg[blue]%}%n@%m:%{$fg_bold[red]%}➜%{$fg_no_bold[green]%}%c%{$reset_color%}$(parse_git_branch)%{$fg[blue]%} %#%{$reset_color%} '
+  PS1='%{$fg_bold[red]%}➜ %{$fg_no_bold[green]%}%c%{$reset_color%}$(parse_git_branch)%{$fg[blue]%} %#%{$reset_color%} '
   PS2='%_>'
+  RPROMPT='%{$fg_bold[cyan]%}%n@%M%{$reset_color%}'
 }
 
 prompt_bolkabolka_setup
