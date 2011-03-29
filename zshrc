@@ -1,4 +1,5 @@
 autoload colors; colors;
+for config_file (~/.zsh/lib/*.zsh) source $config_file
 
 # Global Aliases
 alias -g L='|less'
@@ -8,10 +9,10 @@ alias -g N='&>/dev/null&'
 
 # helpful Aliases 
 alias .='pwd'
-alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 
+alias x=extract
 alias ds='dirs -v'
 alias :e=vim
 
@@ -124,4 +125,3 @@ zstyle ':completion:*:*:(ssh|scp):*:*' hosts `sed 's/^\([^ ,]*\).*$/\1/' ~/.ssh/
 autoload -U ~/.zsh/Completion/*(:t)
 autoload -U compinit
 compinit -u
-
