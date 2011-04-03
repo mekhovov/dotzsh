@@ -73,6 +73,8 @@ alias notes="ack 'TODO|FIXME|XXX|HACK' --ignore-dir=tmp --ignore-dir=log"
 
 # RUBY
 [[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm && hash -d gem="$(rvm gemdir)/gems"
+# TODO: check rvm version, should be equal or greater than 1.5.x
+rvm rvmrc trusted | grep --silent "is currently trusted" && source rvm rvmrc load
 export RUBYLIB="./lib"
 
 # HISTORY
