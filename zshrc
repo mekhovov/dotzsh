@@ -38,6 +38,7 @@ bindkey " " magic-space              ## do history expansion on space
 alias ls='ls --color=auto -FG'
 alias ll='ls --color=auto -FGhl'
 alias la='ls --color=auto -FGhla'
+alias l='ls --color=auto -FG'
 
 # GREP
 export GREP_COLOR='1;37;41'
@@ -127,3 +128,7 @@ zstyle ':completion:*:*:(ssh|scp):*:*' hosts `sed 's/^\([^ ,]*\).*$/\1/' ~/.ssh/
 autoload -U ~/.zsh/Completion/*(:t)
 autoload -U compinit
 compinit -u
+
+# RVM
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+
